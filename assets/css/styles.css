@@ -410,3 +410,99 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   .hero__badge { left: 0; }
   .cards { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   18. Seções adicionais (conteúdo real)
+   ========================================================================== */
+
+/* ---------- Método CRESCER (escada de etapas) -------------------------- */
+.metodo__head { max-width: 760px; margin-bottom: 12px; }
+.crescer-word { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 40px; }
+.crescer-word span {
+  font-family: var(--font-serif); font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600;
+  color: var(--dourado-dark); line-height: 1;
+}
+.crescer-word span b { color: var(--bordo); font-weight: 600; }
+
+.crescer { display: grid; gap: 14px; }
+.step {
+  display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
+  background: #fff; border: 1px solid var(--linha); border-left: 5px solid var(--laranja);
+  border-radius: 16px; padding: 22px 26px; box-shadow: var(--sombra-sm);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.step:hover { transform: translateX(4px); box-shadow: var(--sombra-md); }
+.step__letter {
+  font-family: var(--font-serif); font-size: 2.3rem; font-weight: 600;
+  width: 66px; height: 66px; flex: none; display: grid; place-items: center;
+  border-radius: 16px; background: var(--areia-2); color: var(--bordo);
+}
+.step__body h3 { font-size: 1.18rem; margin-bottom: 4px; }
+.step__body p { margin: 0; color: var(--tinta-suave); font-size: .96rem; }
+/* cores alternadas por etapa */
+.step:nth-child(7n+1){border-left-color:#6b7a3a}.step:nth-child(7n+1) .step__letter{background:#eef0e2;color:#57632c}
+.step:nth-child(7n+2){border-left-color:var(--dourado-dark)}.step:nth-child(7n+2) .step__letter{background:var(--creme);color:var(--dourado-dark)}
+.step:nth-child(7n+3){border-left-color:#6b7a3a}.step:nth-child(7n+3) .step__letter{background:#eef0e2;color:#57632c}
+.step:nth-child(7n+4){border-left-color:#c2683f}.step:nth-child(7n+4) .step__letter{background:#f6e3d7;color:#a94e28}
+.step:nth-child(7n+5){border-left-color:var(--dourado-dark)}.step:nth-child(7n+5) .step__letter{background:var(--creme);color:var(--dourado-dark)}
+.step:nth-child(7n+6){border-left-color:#c2683f}.step:nth-child(7n+6) .step__letter{background:#f6e3d7;color:#a94e28}
+.step:nth-child(7n+7){border-left-color:var(--laranja)}.step:nth-child(7n+7) .step__letter{background:#fbe6cf;color:var(--laranja-dark)}
+/* efeito escada em telas largas */
+@media (min-width: 960px) {
+  .step:nth-child(2){margin-left:34px}.step:nth-child(3){margin-left:68px}
+  .step:nth-child(4){margin-left:102px}.step:nth-child(5){margin-left:136px}
+  .step:nth-child(6){margin-left:170px}.step:nth-child(7){margin-left:204px}
+}
+
+/* ---------- Nota no card (sem preço) ----------------------------------- */
+.card__note {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px;
+  font-size: .82rem; font-weight: 700; letter-spacing: .04em;
+  color: var(--dourado-dark);
+}
+.card__note svg { width: 16px; height: 16px; }
+.card__note.is-free { color: #57632c; }
+
+/* ---------- Livro (banda de destaque) ---------------------------------- */
+.livro { background: var(--grad-quente); color: #fff; }
+.livro__inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
+.livro__cover {
+  width: 230px; aspect-ratio: 3/4; border-radius: 12px; flex: none;
+  background: linear-gradient(150deg, var(--bordo), var(--bordo-dark));
+  box-shadow: var(--sombra-lg); display: grid; place-items: center; text-align: center;
+  padding: 30px; position: relative; overflow: hidden;
+}
+.livro__cover::before { content: ""; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,.15); }
+.livro__cover .k { font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; color: var(--creme); line-height: 1.2; }
+.livro__cover .aut { position: absolute; bottom: 20px; left: 0; right: 0; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--dourado); }
+.livro h2 .serif { color: var(--creme); }
+.livro p { color: rgba(255,255,255,.88); max-width: 54ch; }
+
+/* ---------- Instituições ------------------------------------------------ */
+.inst__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 44px; }
+.inst-card { background: #fff; border: 1px solid var(--linha); border-radius: var(--radius); padding: 32px 28px; box-shadow: var(--sombra-sm); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.inst-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-md); }
+.inst-card__icon { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; background: var(--grad-bordo); color: var(--creme); margin-bottom: 18px; }
+.inst-card__icon svg { width: 28px; height: 28px; }
+.inst-card h3 { font-size: 1.2rem; }
+.inst-card p { color: var(--tinta-suave); font-size: .95rem; margin: 0 0 16px; }
+.inst-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.inst-card li { display: flex; gap: 9px; align-items: flex-start; font-size: .9rem; }
+.inst-card li svg { width: 16px; height: 16px; color: var(--dourado-dark); flex: none; margin-top: 3px; }
+.inst__cta { margin-top: 40px; text-align: center; }
+
+/* ---------- Frase / manifesto (substitui depoimentos) ------------------ */
+.frase { position: relative; background: var(--grad-bordo); color: #fff; text-align: center; overflow: hidden; }
+.frase__mono { position: absolute; left: 8%; top: 50%; transform: translateY(-50%); width: 300px; opacity: .07; }
+.frase .container { position: relative; z-index: 2; max-width: 900px; }
+.frase blockquote { margin: 0; }
+.frase .q { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.5rem, 3.6vw, 2.3rem); line-height: 1.4; color: #fff; }
+.frase .q b { color: var(--dourado); font-weight: 600; font-style: normal; }
+.frase cite { display: block; margin-top: 24px; font-style: normal; font-size: .9rem; letter-spacing: .06em; color: var(--dourado); font-weight: 600; text-transform: uppercase; }
+
+@media (max-width: 760px) {
+  .livro__inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .livro p { margin-inline: auto; }
+  .step { grid-template-columns: auto 1fr; gap: 16px; padding: 18px 20px; }
+  .step__letter { width: 54px; height: 54px; font-size: 1.9rem; }
+}

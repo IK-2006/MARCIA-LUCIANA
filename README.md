@@ -1,11 +1,12 @@
 # Márcia Luciana — Landing page de cursos e produtos
 
-Página estática (HTML + CSS + JavaScript puro, sem dependências) que apresenta a
-marca **Márcia Luciana** e direciona o visitante para a compra dos cursos, mentorias,
-livros e comunidade.
+Página estática (HTML + CSS + JavaScript puro, sem dependências) que apresenta o
+movimento **Geração Consciente**, de **Márcia Luciana**, e direciona o visitante para
+os materiais, cursos, mentoria e formações — além das frentes para escolas e empresas.
 
-Baseada no Guia da Marca / Estudo de Marca (Grupo Power):
-- **Posicionamento:** Especialista em Desenvolvimento das Relações Humanas
+Baseada no Guia da Marca (Grupo Power) e no conteúdo real (portfólio, e-book, Método CRESCER):
+- **Movimento:** Geração Consciente — educação para a sexualidade, diálogo e prevenção ao abuso
+- **Posicionamento:** especialista em sexualidade, educação emocional e prevenção ao abuso sexual
 - **Paleta:** Bordô `#5b0b1b` · Laranja `#f48b20` · Dourado `#d8b26a` · Creme `#f6e0b2`
 - **Tipografia:** Montserrat (base) + Playfair Display (acentos)
 - **Tese:** *Conectando famílias. Protegendo gerações. Transformando futuros.*
@@ -36,24 +37,33 @@ Cada produto é um bloco `<article class="card">`. Para cada um, edite:
 | Título           | `<h3>...</h3>`                                     |
 | Categoria        | atributo `data-cat` **e** o texto de `card__tag`  |
 | Descrição        | `<p class="card__desc">`                           |
-| Preço            | `<span class="value">` (e opcional `<span class="old">`) |
-| Parcelas         | `<p class="card__installments">`                  |
-| **Link de compra** | `href="#SEU-LINK-DE-CHECKOUT"` no botão `<a class="btn">` |
+| Formato/nota     | `<span class="card__note">` (ex.: "Curso online", "Material gratuito") |
+| **Link de ação** | `href="#contato"` no botão `<a class="btn">`       |
 
-> Troque **todos** os `#SEU-LINK-DE-CHECKOUT` pelo link real do checkout
-> (ex.: `https://pay.hotmart.com/XXXXXXX`).
+> Hoje **todos os botões de produto apontam para `#contato`** (rolam até o rodapé),
+> porque ainda não há links de checkout/venda. Quando tiver, troque o `href="#contato"`
+> pelo link real de cada produto: checkout (ex.: `https://pay.hotmart.com/XXXX`),
+> página de download do e-book, formulário ou WhatsApp.
 
-Categorias válidas para o filtro (`data-cat`): `curso`, `mentoria`, `livro`, `comunidade`.
+Produtos atuais (na ordem da jornada): E-book *Primeiras Conversas* (grátis),
+curso *Do Silêncio ao Diálogo*, curso *Diálogo Seguro*, série *Do Automático à Consciência*,
+formação *Educação que Protege* (escolas) e mentoria *Lado a Lado com o Futuro*.
+
+Categorias válidas para o filtro (`data-cat`): `gratis`, `curso`, `mentoria`, `escolas`.
 Para adicionar um produto, copie um bloco `<article class="card">` inteiro.
 Para remover, apague o bloco.
 
 ## Outros itens a personalizar
 
-- **Depoimentos:** seção `#depoimentos` — troque pelos depoimentos reais.
-- **Redes sociais e contato:** rodapé — troque os `href="#"` e o e-mail.
-- **Números da seção "Sobre":** `+10 anos`, `+5.000 famílias`, etc.
+- **Redes sociais e contato:** rodapé (`#contato`) — troque os `href="#"`, o e-mail e o WhatsApp reais.
+- **Link do livro:** botão "Quero o livro" na seção do livro (`href="#contato"`).
+- **Método CRESCER:** seção `#metodo` — os 7 passos (C-R-E-S-C-E-R).
 - **Domínio:** atualize `<link rel="canonical">` e `og:url` no `<head>`.
 - **Foto de compartilhamento:** `og:image` no `<head>`.
+
+> Observação: por decisão de conteúdo, esta versão **não usa depoimentos nem números
+> inventados** — no lugar deles há credenciais reais e frases da própria Márcia. Ao ter
+> depoimentos reais, dá para reintroduzir uma seção de depoimentos.
 
 ## Rodar localmente
 
