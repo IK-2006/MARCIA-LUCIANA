@@ -29,29 +29,37 @@ Marcia-Luciana-Sistema/
 
 ## Como editar os produtos  ⚠️ importante
 
-Todos os cursos/produtos ficam na seção `<!-- CURSOS -->` do `index.html`.
+Todos os produtos ficam na seção `<!-- MATERIAIS -->` do `index.html`.
 Cada produto é um bloco `<article class="card">`. Para cada um, edite:
 
 | O quê            | Onde                                              |
 |------------------|---------------------------------------------------|
 | Título           | `<h3>...</h3>`                                     |
-| Categoria        | atributo `data-cat` **e** o texto de `card__tag`  |
+| Categoria        | atributo `data-cat` **e** o texto de `<p class="card__tag">` |
 | Descrição        | `<p class="card__desc">`                           |
-| Formato/nota     | `<span class="card__note">` (ex.: "Curso online", "Material gratuito") |
-| **Link de ação** | `href="#contato"` no botão `<a class="btn">`       |
+| Formato/nota     | `<span class="card__note">` (ex.: "Curso online")  |
+| **Link de ação** | `href="#contato"` no botão `<a class="btn ...">`   |
 
 > Hoje **todos os botões de produto apontam para `#contato`** (rolam até o rodapé),
 > porque ainda não há links de checkout/venda. Quando tiver, troque o `href="#contato"`
-> pelo link real de cada produto: checkout (ex.: `https://pay.hotmart.com/XXXX`),
-> página de download do e-book, formulário ou WhatsApp.
+> pelo link real (checkout, formulário ou WhatsApp).
 
-Produtos atuais (na ordem da jornada): E-book *Primeiras Conversas* (grátis),
-curso *Do Silêncio ao Diálogo*, curso *Diálogo Seguro*, série *Do Automático à Consciência*,
-formação *Educação que Protege* (escolas) e mentoria *Lado a Lado com o Futuro*.
+Produtos atuais (na ordem da jornada): curso *Do Silêncio ao Diálogo*, curso *Diálogo Seguro*,
+série *Do Automático à Consciência*, formação *Educação que Protege* (escolas) e
+mentoria *Lado a Lado com o Futuro*.
 
-Categorias válidas para o filtro (`data-cat`): `gratis`, `curso`, `mentoria`, `escolas`.
+Categorias válidas para o filtro (`data-cat`): `curso`, `mentoria`, `escolas`.
 Para adicionar um produto, copie um bloco `<article class="card">` inteiro.
 Para remover, apague o bloco.
+
+## Sistema visual (v2)
+
+O CSS (`assets/css/styles.css`) é um design system com **tokens** no `:root`:
+cores (`--primary` bordô, `--gold`, neutros), tipografia (escala `--fs-*`), espaçamento
+(`--s1`…`--s11`, escala 8px), raios (`--r*`), sombras (`--shadow-*`). Para mudar a cor
+principal, cor de fundo ou tamanhos, altere os tokens — o site inteiro acompanha.
+Componentes reaproveitados: `.btn` (`--primary`/`--secondary`/`--ghost`/`--on-dark`),
+`.card`, `.s-head`/`.eyebrow`/`.s-title`, `.section`/`.section--tint`.
 
 ## Outros itens a personalizar
 

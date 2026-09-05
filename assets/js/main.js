@@ -64,9 +64,9 @@
     });
   });
 
-  /* ---------- Filtro de cursos por categoria ---------- */
-  var filtros = document.querySelectorAll(".filtro");
-  var cards = document.querySelectorAll(".cards .card");
+  /* ---------- Filtro de materiais por categoria ---------- */
+  var filtros = document.querySelectorAll("#materiais .filter");
+  var cards = document.querySelectorAll("#materiais .cards .card");
   filtros.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var alvo = btn.getAttribute("data-filter");
