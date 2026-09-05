@@ -25,7 +25,7 @@
   --linha:        #e7dccb;   /* bordas sutis */
 
   /* Gradientes */
-  --grad-quente:  linear-gradient(135deg, #2c1a0e 0%, #5a3a1c 45%, #a9803f 100%);
+  --grad-quente:  linear-gradient(140deg, #35210f 0%, #613f1f 42%, #9a6b30 72%, #c99b53 100%);
   --grad-bordo:   linear-gradient(135deg, #5b0b1b 0%, #7a1226 60%, #400711 100%);
   --grad-ouro:    linear-gradient(90deg, var(--dourado) 0%, var(--laranja) 100%);
 
@@ -169,10 +169,11 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 
 /* ---------- 5. Hero ----------------------------------------------------- */
 .hero { position: relative; background: var(--grad-quente); color: #fff; overflow: hidden; }
-.hero::after { /* vinheta suave */
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(120% 90% at 15% 30%, rgba(0,0,0,.28), transparent 60%);
-  pointer-events: none;
+.hero::after { /* brilho quente atrás da foto + vinheta */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(52% 50% at 80% 42%, rgba(246,224,178,.24), transparent 62%),
+    radial-gradient(120% 90% at 12% 25%, rgba(0,0,0,.30), transparent 60%);
 }
 .hero__grid {
   position: relative; z-index: 2;
@@ -190,27 +191,31 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .hero__mini svg { width: 18px; height: 18px; color: var(--dourado); flex: none; }
 .hero__mini ul { display: contents; }
 
-.hero__photo { position: relative; }
+.hero__photo { position: relative; width: 100%; max-width: 430px; margin-left: auto; }
+.hero__photo::before { /* moldura dourada atrás */
+  content: ""; position: absolute; inset: -14px -14px 24px 22px; z-index: 0;
+  background: var(--grad-ouro); border-radius: 28px; opacity: .55;
+}
 .hero__photo img {
-  width: 100%; border-radius: 22px;
-  box-shadow: 0 30px 70px rgba(0,0,0,.4);
-  object-fit: cover;
+  position: relative; z-index: 1; width: 100%;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%;
+  border-radius: 22px; box-shadow: 0 30px 70px rgba(0,0,0,.45);
 }
 .hero__badge {
-  position: absolute; left: -18px; bottom: 26px;
-  background: rgba(255,255,255,.95); color: var(--bordo);
-  padding: 14px 20px; border-radius: 16px; box-shadow: var(--sombra-md);
-  display: flex; align-items: center; gap: 12px; max-width: 240px;
+  position: absolute; z-index: 2; left: -16px; bottom: 22px;
+  background: rgba(255,255,255,.96); color: var(--bordo);
+  padding: 12px 18px; border-radius: 16px; box-shadow: var(--sombra-md);
+  display: flex; align-items: center; gap: 12px; max-width: 230px;
 }
-.hero__badge strong { display: block; font-size: 1.5rem; line-height: 1; color: var(--laranja); }
-.hero__badge span { font-size: .8rem; color: var(--tinta-suave); font-weight: 600; }
-.hero__badge .mono { width: 40px; height: auto; }
+.hero__badge strong { display: block; font-size: 1.1rem; line-height: 1.1; color: var(--laranja); }
+.hero__badge span { font-size: .78rem; color: var(--tinta-suave); font-weight: 600; line-height: 1.25; }
+.hero__badge .mono { width: 34px; height: auto; flex: none; }
 
 /* ---------- 6. Faixa de confiança -------------------------------------- */
-.trust { background: var(--bordo); color: var(--creme); }
-.trust__inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 40px; padding-block: 20px; text-align: center; }
-.trust__item { display: flex; align-items: center; gap: 10px; font-size: .92rem; font-weight: 600; }
-.trust__item svg { width: 20px; height: 20px; color: var(--dourado); flex: none; }
+.trust { background: #fff; color: var(--tinta); border-bottom: 1px solid var(--linha); }
+.trust__inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 40px; padding-block: 22px; text-align: center; }
+.trust__item { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; color: var(--tinta-suave); }
+.trust__item svg { width: 20px; height: 20px; color: var(--laranja); flex: none; }
 
 /* ---------- 7. Tese (banda bordô) -------------------------------------- */
 .tese { position: relative; background: var(--grad-bordo); color: #fff; text-align: center; overflow: hidden; }
@@ -258,39 +263,37 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
 
 .card {
-  display: flex; flex-direction: column; background: #fff;
-  border: 1px solid var(--linha); border-radius: var(--radius); overflow: hidden;
-  box-shadow: var(--sombra-sm);
+  position: relative; display: flex; flex-direction: column; background: #fff;
+  border: 1px solid var(--linha); border-top: 4px solid var(--dourado);
+  border-radius: var(--radius); box-shadow: var(--sombra-sm);
   transition: transform .3s var(--ease), box-shadow .3s var(--ease);
 }
 .card:hover { transform: translateY(-8px); box-shadow: var(--sombra-lg); }
-.card__media { position: relative; aspect-ratio: 16 / 10; background: var(--grad-quente); overflow: hidden; }
-.card__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(43,26,14,.55)); }
-.card__media .mono-water { position: absolute; right: 14px; bottom: 12px; width: 70px; opacity: .9; z-index: 2; }
-.card__tag {
-  position: absolute; top: 14px; left: 14px; z-index: 2;
-  background: rgba(255,255,255,.92); color: var(--bordo);
-  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  padding: 6px 12px; border-radius: 999px;
+.card[data-cat="gratis"]   { border-top-color: #6b7a3a; }
+.card[data-cat="curso"]    { border-top-color: var(--laranja); }
+.card[data-cat="mentoria"] { border-top-color: var(--bordo); }
+.card[data-cat="escolas"]  { border-top-color: #c2683f; }
+
+.card__top { display: flex; align-items: center; gap: 12px; padding: 24px 24px 0; }
+.card__ico {
+  width: 46px; height: 46px; border-radius: 12px; flex: none; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--creme), var(--dourado)); color: var(--bordo);
 }
+.card__ico svg { width: 24px; height: 24px; }
+.card__tag { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dourado-dark); }
 .card__flag {
-  position: absolute; top: 14px; right: 14px; z-index: 2;
+  position: absolute; top: 18px; right: 18px; z-index: 2;
   background: var(--laranja); color: #fff;
-  font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  padding: 6px 12px; border-radius: 999px; box-shadow: 0 4px 12px rgba(244,139,32,.4);
+  font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 5px 11px; border-radius: 999px; box-shadow: 0 4px 12px rgba(244,139,32,.4);
 }
-.card__body { display: flex; flex-direction: column; flex: 1; padding: 26px 24px 28px; }
+.card__body { display: flex; flex-direction: column; flex: 1; padding: 18px 24px 26px; }
 .card__body h3 { font-size: 1.22rem; margin-bottom: 10px; }
 .card__desc { color: var(--tinta-suave); font-size: .95rem; margin: 0 0 20px; }
 .card__feat { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 8px; }
 .card__feat li { display: flex; gap: 9px; align-items: flex-start; font-size: .9rem; color: var(--tinta); }
 .card__feat svg { width: 17px; height: 17px; color: var(--dourado-dark); flex: none; margin-top: 3px; }
 .card__foot { margin-top: auto; }
-.card__price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px; }
-.card__price .from { font-size: .82rem; color: var(--tinta-suave); }
-.card__price .value { font-size: 1.7rem; font-weight: 800; color: var(--bordo); letter-spacing: -.02em; }
-.card__price .old { font-size: .95rem; color: var(--tinta-suave); text-decoration: line-through; }
-.card__installments { font-size: .82rem; color: var(--tinta-suave); margin: -10px 0 16px; }
 
 /* ---------- 10. Para quem é -------------------------------------------- */
 .para { background: var(--grad-quente); color: #fff; }
@@ -449,9 +452,9 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .step:nth-child(7n+7){border-left-color:var(--laranja)}.step:nth-child(7n+7) .step__letter{background:#fbe6cf;color:var(--laranja-dark)}
 /* efeito escada em telas largas */
 @media (min-width: 960px) {
-  .step:nth-child(2){margin-left:34px}.step:nth-child(3){margin-left:68px}
-  .step:nth-child(4){margin-left:102px}.step:nth-child(5){margin-left:136px}
-  .step:nth-child(6){margin-left:170px}.step:nth-child(7){margin-left:204px}
+  .step:nth-child(2){margin-left:24px}.step:nth-child(3){margin-left:48px}
+  .step:nth-child(4){margin-left:72px}.step:nth-child(5){margin-left:96px}
+  .step:nth-child(6){margin-left:120px}.step:nth-child(7){margin-left:144px}
 }
 
 /* ---------- Nota no card (sem preço) ----------------------------------- */
