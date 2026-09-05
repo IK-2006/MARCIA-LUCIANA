@@ -1,0 +1,7 @@
+# Sistema (macOS/Windows/editores)
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
