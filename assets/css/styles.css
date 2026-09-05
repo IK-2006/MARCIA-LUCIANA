@@ -152,8 +152,9 @@ p { margin: 0; }
 .brand span { color: var(--primary); }
 
 .nav { display: flex; align-items: center; gap: var(--s1); }
-.nav a { padding: 8px 12px; font-size: var(--fs-sm); font-weight: 500; color: var(--body); border-radius: var(--r-xs); transition: color .15s, background .15s; }
-.nav a:hover { color: var(--ink); background: rgba(31,26,22,.04); }
+.nav a:not(.btn) { padding: 8px 12px; font-size: var(--fs-sm); font-weight: 500; color: var(--body); border-radius: var(--r-xs); transition: color .15s, background .15s; }
+.nav a:not(.btn):hover { color: var(--ink); background: rgba(31,26,22,.04); }
+.nav a.btn--primary { color: #fff; }
 .nav .btn { margin-left: var(--s3); min-height: 40px; padding: 0 18px; }
 
 .nav-toggle {
@@ -178,7 +179,7 @@ p { margin: 0; }
 
 .hero__media { position: relative; }
 .hero__media img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%;
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 45%;
   border-radius: var(--r-lg); box-shadow: var(--shadow-lg);
 }
 .hero__media::after { /* painel creme sutil atrás, alinhado à direita */
