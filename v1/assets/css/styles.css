@@ -144,19 +144,19 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   transition: box-shadow .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
 }
 .header.is-scrolled { box-shadow: var(--sombra-sm); border-color: var(--linha); }
-.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 74px; }
+.header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; min-height: 74px; }
 
 .brand { display: inline-flex; align-items: baseline; gap: .4ch; font-size: 1.15rem; letter-spacing: .18em; font-weight: 600; white-space: nowrap; }
 .brand b { font-weight: 700; color: var(--tinta); }
 .brand span { color: var(--laranja); font-weight: 700; }
 
-.nav { display: flex; align-items: center; gap: 8px; }
+.nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px 6px; }
 .nav a {
-  padding: 10px 14px; font-size: .93rem; font-weight: 600; color: var(--tinta);
+  padding: 9px 11px; font-size: .9rem; font-weight: 600; color: var(--tinta);
   border-radius: 8px; transition: color .2s, background .2s; white-space: nowrap;
 }
 .nav a:hover { color: var(--bordo); background: rgba(216, 178, 106, .16); }
-.header .btn { padding: 12px 22px; }
+.header .btn { padding: 10px 16px; margin-left: 4px; }
 
 .nav-toggle {
   display: none; width: 46px; height: 46px; border: 1px solid var(--linha); border-radius: 12px;
@@ -390,16 +390,11 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   .footer__brand-col { grid-column: 1 / -1; }
 }
 
-@media (max-width: 1024px) {
-  .nav {
-    position: fixed; inset: 74px 0 auto 0; flex-direction: column; align-items: stretch; gap: 4px;
-    background: var(--areia); padding: 16px 20px 24px; box-shadow: var(--sombra-md);
-    transform: translateY(-140%); transition: transform .35s var(--ease); border-bottom: 1px solid var(--linha);
-  }
-  .nav.is-open { transform: translateY(0); }
-  .nav a { padding: 14px 12px; border-radius: 10px; }
-  .nav .btn { margin: 8px 0 0; }
-  .nav-toggle { display: flex; }
+/* Menu sempre visível (sem hambúrguer): em telas estreitas ele quebra
+   para uma nova linha, centralizado, mantendo todos os itens acessíveis. */
+@media (max-width: 640px) {
+  .header__inner { flex-direction: column; gap: 12px; }
+  .nav { justify-content: center; }
 }
 
 @media (max-width: 720px) {
