@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5b0b1b" />
+  <title>Blog | Márcia Luciana</title>
+  <meta name="description" content="Conteúdo do blog da Márcia Luciana — Geração Consciente." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
+  <script src="assets/js/pixel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="Márcia Luciana - página inicial"><b>MÁRCIA</b> <span>LUCIANA</span></a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html#metodo">Método</a>
+        <a href="index.html#cursos">Materiais</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#escolas">Escolas</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#cursos" class="btn">Ver materiais</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="section">
+      <div class="container">
+        <a class="post-back" href="blog.html">← Voltar para o blog</a>
+        <div class="article">
+          <p class="article__meta" id="meta"></p>
+          <h1 class="article__title" id="title">Carregando…</h1>
+          <div class="article__body" id="content"></div>
+        </div>
+        <div class="article__cta">
+          <p>Quer ir além? Conheça os materiais da Geração Consciente.</p>
+          <a href="index.html#cursos" class="btn" data-fbevent="ViewContent">Ver os materiais</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer__bottom" style="border:0;justify-content:center;text-align:center">
+        <span>© <span id="ano"></span> Márcia Luciana de Oliveira — Geração Consciente.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    function fmtData(d){ try { return new Date(d + 'T12:00:00').toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'}); } catch(e){ return d; } }
+    var slug = new URLSearchParams(location.search).get('p');
+    fetch('blog-posts/index.json?t=' + Date.now())
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var posts = data.posts || [];
+        var post = posts.find(function(p){ return p.slug === slug; }) || posts[0];
+        if (!post){ document.getElementById('title').textContent = 'Post não encontrado'; document.getElementById('content').innerHTML = '<p><a href="blog.html">Voltar para o blog</a></p>'; return; }
+        document.title = post.title + ' | Márcia Luciana';
+        document.getElementById('title').textContent = post.title;
+        document.getElementById('meta').textContent = fmtData(post.date);
+        document.getElementById('content').innerHTML = (window.marked ? marked.parse(post.body || '') : (post.body || ''));
+      })
+      .catch(function(){
+        document.getElementById('title').textContent = 'Não foi possível carregar o conteúdo';
+      });
+  </script>
+</body>
+</html>

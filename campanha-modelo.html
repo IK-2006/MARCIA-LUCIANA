@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- =========================================================================
+     MODELO DE PÁGINA DE GATILHO (para tráfego pago)
+     COMO USAR:
+     1. Duplique este arquivo e renomeie (ex.: campanha-ciclo-do-silencio.html).
+        O link fica escondido (não aparece no menu): site.com/campanha-ciclo-do-silencio.html
+     2. Troque, marcados abaixo com  << EDITAR >> :
+        - o TÍTULO/eyebrow do gatilho
+        - o VÍDEO (id do YouTube ou Vimeo)
+        - o TEXTO do gatilho
+        - o LINK do botão (checkout da Hotmart)
+     3. Aponte o anúncio para esse link. Quando mudar o gatilho, duplique de novo.
+     ========================================================================= -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5b0b1b" />
+  <!-- << EDITAR >> título que aparece na aba/compartilhamento -->
+  <title>Você não precisa repetir os silêncios que recebeu | Márcia Luciana</title>
+  <meta name="description" content="Assista ao vídeo e descubra como transformar o diálogo dentro da sua família." />
+  <!-- robots: não indexar páginas de campanha no Google -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
+  <script src="assets/js/pixel.js"></script>
+</head>
+<body>
+  <!-- topo minimalista: só a marca (sem menu, pra não distrair) -->
+  <div class="mini-top">
+    <div class="container"><span class="brand"><b>MÁRCIA</b> <span>LUCIANA</span></span></div>
+  </div>
+
+  <main class="vsl-wrap">
+    <div class="container">
+      <section class="vsl">
+        <!-- << EDITAR >> eyebrow + título do gatilho -->
+        <p class="eyebrow eyebrow--center">Para pais, mães e cuidadores</p>
+        <h1>Você não precisa repetir os <span class="serif">silêncios</span> que recebeu.</h1>
+        <p class="vsl__lead">Assista ao vídeo abaixo — em poucos minutos você entende como começar conversas que protegem e transformam a sua família.</p>
+
+        <!-- VÍDEO << EDITAR >>
+             YouTube: troque VIDEO_ID em .../embed/VIDEO_ID
+             (o VIDEO_ID é o que vem depois de "v=" no link do YouTube)
+             Vimeo: use  https://player.vimeo.com/video/NUMERO_DO_VIDEO  -->
+        <div class="vsl__video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                  title="Vídeo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- << EDITAR >> texto do gatilho -->
+        <div class="vsl__copy">
+          <p>Muita gente cresceu sem poder conversar sobre corpo, emoções e limites — e acaba, sem perceber, repetindo esse mesmo silêncio com os próprios filhos.</p>
+          <p>A boa notícia é que dá para quebrar esse ciclo. Com as ferramentas certas, você aprende a falar desses temas com leveza, segurança e afeto, na medida certa para cada idade.</p>
+        </div>
+
+        <!-- CTA << EDITAR >> troque o href pelo link do checkout (Hotmart) -->
+        <a class="btn btn--lg vsl__cta" href="#SEU-LINK-DE-CHECKOUT" data-fbevent="InitiateCheckout" rel="noopener">
+          Quero começar agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="vsl__trust">Pagamento 100% seguro · Acesso imediato</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border:0;justify-content:center;text-align:center">
+        <span>© <span id="ano"></span> Márcia Luciana de Oliveira — Geração Consciente.</span>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>

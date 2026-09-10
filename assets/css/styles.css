@@ -407,3 +407,59 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   .hero__badge { left: 0; }
   .cards { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   BLOG + PÁGINAS DE GATILHO (campanha)
+   ========================================================================== */
+
+/* Sub-hero (topo do blog) */
+.subhero { background: var(--grad-bordo); color: #fff; text-align: center; padding-block: clamp(48px, 7vw, 84px); }
+.subhero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); max-width: 20ch; margin-inline: auto; }
+.subhero h1 .serif { color: var(--dourado); }
+.subhero p { color: rgba(255,255,255,.85); max-width: 54ch; margin: 18px auto 0; font-size: 1.05rem; }
+
+/* Lista de posts */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+.blog-empty { grid-column: 1 / -1; text-align: center; color: var(--tinta-suave); padding: 40px 0; }
+.post-card { background: #fff; border: 1px solid var(--linha); border-radius: var(--radius); overflow: hidden; box-shadow: var(--sombra-sm); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.post-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-md); }
+.post-card__link { display: block; height: 100%; }
+.post-card__body { padding: 28px 26px; }
+.post-card__date { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dourado-dark); }
+.post-card__body h2 { font-size: 1.25rem; margin: 10px 0 10px; color: var(--tinta); }
+.post-card__body p { color: var(--tinta-suave); font-size: .95rem; margin: 0 0 16px; }
+.post-card__more { font-weight: 700; color: var(--bordo); font-size: .92rem; }
+
+/* Post individual */
+.post-back { display: inline-block; margin-bottom: 24px; font-weight: 600; color: var(--bordo); font-size: .92rem; }
+.article { max-width: 720px; margin-inline: auto; }
+.article__meta { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dourado-dark); margin-bottom: 10px; }
+.article__title { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--tinta); margin-bottom: 28px; }
+.article__body { font-size: 1.08rem; line-height: 1.75; color: var(--tinta); }
+.article__body h2 { font-size: 1.4rem; margin: 32px 0 12px; color: var(--bordo); }
+.article__body h3 { font-size: 1.15rem; margin: 24px 0 10px; }
+.article__body p { margin: 0 0 18px; }
+.article__body ul, .article__body ol { margin: 0 0 18px; padding-left: 22px; }
+.article__body li { margin-bottom: 8px; }
+.article__body a { color: var(--bordo); text-decoration: underline; }
+.article__body img { border-radius: 14px; margin: 20px 0; }
+.article__body blockquote { margin: 24px 0; padding: 4px 22px; border-left: 3px solid var(--dourado); color: var(--tinta-suave); font-style: italic; }
+.article__cta { max-width: 720px; margin: 48px auto 0; padding: 32px; text-align: center; background: var(--areia-2); border: 1px solid var(--linha); border-radius: var(--radius); }
+.article__cta p { margin: 0 0 18px; font-weight: 600; color: var(--tinta); }
+
+/* Página de gatilho (VSL) */
+.mini-top { border-bottom: 1px solid var(--linha); background: #fff; }
+.mini-top .container { padding-block: 16px; text-align: center; }
+.mini-top .brand { font-size: 1.05rem; letter-spacing: .16em; font-weight: 600; }
+.mini-top .brand b { color: var(--tinta); } .mini-top .brand span { color: var(--laranja); }
+.vsl-wrap { padding-block: clamp(36px, 6vw, 72px); }
+.vsl { max-width: 820px; margin-inline: auto; text-align: center; }
+.vsl h1 { font-size: clamp(1.9rem, 4.6vw, 3rem); max-width: 22ch; margin: 8px auto 0; }
+.vsl h1 .serif { color: var(--bordo); }
+.vsl__lead { color: var(--tinta-suave); max-width: 56ch; margin: 18px auto 0; font-size: 1.08rem; }
+.vsl__video { position: relative; aspect-ratio: 16 / 9; margin: 32px 0; border-radius: 16px; overflow: hidden; box-shadow: var(--sombra-lg); background: #000; }
+.vsl__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vsl__copy { text-align: left; max-width: 620px; margin: 0 auto; color: var(--tinta); font-size: 1.05rem; line-height: 1.7; }
+.vsl__copy p { margin: 0 0 16px; }
+.vsl__cta { margin-top: 28px; }
+.vsl__trust { margin-top: 14px; font-size: .85rem; color: var(--tinta-suave); }
