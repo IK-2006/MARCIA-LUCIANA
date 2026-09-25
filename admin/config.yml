@@ -1,0 +1,36 @@
+# Configuração do painel do blog (Decap CMS)
+# Login por e-mail/senha via Netlify Identity + Git Gateway.
+backend:
+  name: git-gateway
+  branch: main
+
+# Onde ficam as imagens que ela subir dentro dos posts
+media_folder: "assets/img/blog"
+public_folder: "assets/img/blog"
+
+locale: "pt"
+
+# Mensagens em português no editor
+site_url: https://www.marcialuciana.com.br
+display_url: https://www.marcialuciana.com.br
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    files:
+      - name: "posts"
+        label: "Posts do Blog"
+        file: "blog-posts/index.json"
+        description: "Adicione, edite ou remova os posts do blog. Clique em Publicar para salvar."
+        fields:
+          - name: "posts"
+            label: "Posts"
+            label_singular: "Post"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "slug", label: "Link (slug)", widget: "string", hint: "Só letras minúsculas e hífens. Ex.: meu-primeiro-post" }
+              - { name: "date", label: "Data", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: "excerpt", label: "Resumo", widget: "text", hint: "Frase curta que aparece na lista do blog." }
+              - { name: "body", label: "Conteúdo", widget: "markdown" }
