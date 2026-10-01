@@ -501,3 +501,18 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .offer__price .install { color: var(--tinta-suave); font-size: .92rem; margin-top: 8px; }
 .offer__body .btn { margin-top: 20px; }
 .offer__secure { margin-top: 14px; font-size: .82rem; color: var(--tinta-suave); }
+
+/* Selos de credibilidade perto da oferta */
+.offer-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; max-width: 580px; margin: 0 auto 26px; }
+.offer-trust span { display: inline-flex; align-items: center; gap: 7px; font-size: .85rem; color: var(--tinta-suave); font-weight: 600; }
+.offer-trust svg { width: 16px; height: 16px; color: var(--dourado-dark); flex: none; }
+
+/* Barra de CTA fixa (página de vendas) */
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; background: #fff; border-top: 1px solid var(--linha); box-shadow: 0 -6px 24px rgba(59,34,16,.14); transform: translateY(110%); transition: transform .3s var(--ease); }
+.sticky-cta.is-visible { transform: translateY(0); }
+.sticky-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.sticky-cta__info strong { display: block; font-size: .98rem; color: var(--tinta); line-height: 1.2; }
+.sticky-cta__info span { font-size: .82rem; color: var(--tinta-suave); }
+.sticky-cta .btn { min-height: 46px; white-space: nowrap; }
+@media (max-width: 480px) { .sticky-cta__info span { display: none; } .sticky-cta__info strong { font-size: .9rem; } }
+@media print { .sticky-cta { display: none !important; } }

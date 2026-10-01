@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=9" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
   <script src="assets/js/pixel.js"></script>
 </head>
 <body>
@@ -148,6 +148,11 @@
           <p class="eyebrow eyebrow--center">Garanta sua vaga</p>
           <h2 class="section-title section-title--center">Comece hoje a transformar o diálogo em casa.</h2>
         </div>
+        <div class="offer-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Autora de “Sexualidade sem Vergonha”</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Método Master ESEPAS</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Projeto aprovado pela Lei Rouanet</span>
+        </div>
         <div class="offer">
           <div class="offer__head">
             <h3>Curso Do Silêncio ao Diálogo</h3>
@@ -233,6 +238,18 @@
     </section>
   </main>
 
+  <!-- Barra de CTA fixa (aparece ao rolar; some quando a oferta está na tela) -->
+  <div class="sticky-cta" id="stickyCta">
+    <div class="container sticky-cta__inner">
+      <div class="sticky-cta__info">
+        <strong>Do Silêncio ao Diálogo</strong>
+        <span>R$ 197 · acesso imediato</span>
+      </div>
+      <!-- quando tiver o link da Hotmart, troque href="#oferta" pelo checkout -->
+      <a href="#oferta" class="btn">Inscrever-se</a>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border:0;justify-content:center;text-align:center">
@@ -242,5 +259,19 @@
   </footer>
 
   <script src="assets/js/main.js?v=9" defer></script>
+  <script>
+    (function () {
+      var bar = document.getElementById('stickyCta'); if (!bar) return;
+      var offer = document.getElementById('oferta');
+      function update() {
+        var show = window.scrollY > 600;
+        if (offer) { var r = offer.getBoundingClientRect(); if (r.top < window.innerHeight && r.bottom > 0) show = false; }
+        bar.classList.toggle('is-visible', show);
+      }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+    })();
+  </script>
 </body>
 </html>
