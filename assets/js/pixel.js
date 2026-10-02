@@ -10,7 +10,7 @@
      data-fbevent="InitiateCheckout"   (ou "Lead", "Contact", "ViewContent"...)
    ========================================================================== */
 (function () {
-  var PIXEL_ID = "SEU_PIXEL_ID"; // <-- COLE AQUI O ID DO PIXEL
+  var PIXEL_ID = "2013100646011863"; // Meta Pixel da Márcia Luciana
 
   // helper global (fica como "no-op" enquanto o pixel estiver desligado)
   window.mlTrack = function () {};
