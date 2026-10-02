@@ -150,13 +150,13 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .brand b { font-weight: 700; color: var(--tinta); }
 .brand span { color: var(--laranja); font-weight: 700; }
 
-.nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px 6px; }
+.nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px 6px; margin-left: auto; }
 .nav a {
   padding: 9px 11px; font-size: .9rem; font-weight: 600; color: var(--tinta);
   border-radius: 8px; transition: color .2s, background .2s; white-space: nowrap;
 }
 .nav a:hover { color: var(--bordo); background: rgba(216, 178, 106, .16); }
-.header .btn { padding: 10px 16px; margin-left: 4px; }
+.header .btn { padding: 10px 16px; margin-left: 8px; }
 
 .nav-toggle {
   display: none; width: 46px; height: 46px; border: 1px solid var(--linha); border-radius: 12px;
@@ -390,11 +390,23 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   .footer__brand-col { grid-column: 1 / -1; }
 }
 
-/* Menu sempre visível (sem hambúrguer): em telas estreitas ele quebra
-   para uma nova linha, centralizado, mantendo todos os itens acessíveis. */
+/* Menu sempre visível (sem hambúrguer). No celular, o cabeçalho fica compacto:
+   LINHA 1 = marca + botão "Ver materiais" (sempre à vista);
+   LINHA 2 = os links numa faixa que desliza na horizontal (todos acessíveis). */
 @media (max-width: 640px) {
-  .header__inner { flex-direction: column; gap: 12px; }
-  .nav { justify-content: center; }
+  .header__inner { flex-wrap: wrap; gap: 8px 10px; min-height: 0; padding-block: 10px; }
+  .brand { font-size: 1rem; letter-spacing: .08em; }
+  .header__cta { order: 0; margin-left: auto; padding: 9px 15px; font-size: .85rem; white-space: nowrap; }
+  .nav {
+    order: 1; width: 100%; margin-left: 0;
+    flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain;
+    justify-content: flex-start; gap: 2px; padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 90%, transparent);
+            mask-image: linear-gradient(90deg, #000 90%, transparent);
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { flex: 0 0 auto; padding: 7px 10px; font-size: .9rem; }
 }
 
 @media (max-width: 720px) {
@@ -403,9 +415,19 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
   .footer__bottom { flex-direction: column; }
 }
 
+/* No celular, a "capa" decorativa do card é mais baixa — o conteúdo que
+   vende (título, benefícios e botão) sobe e fica mais perto do polegar. */
+@media (max-width: 640px) {
+  .card__media { aspect-ratio: 16 / 7; }
+  .card__body { padding: 22px 20px 24px; }
+}
+
 @media (max-width: 420px) {
   .hero__badge { left: 0; }
   .cards { grid-template-columns: 1fr; }
+  /* telas bem estreitas: aperta a marca e o botão pra caberem na mesma linha */
+  .brand { font-size: .92rem; letter-spacing: .04em; }
+  .header__cta { padding: 8px 13px; font-size: .82rem; }
 }
 
 /* ==========================================================================
