@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <!-- =========================================================================
-     PÁGINA DE VENDAS (modelo de curso)
-     Para criar a de outro curso: duplique este arquivo, renomeie e troque,
-     nos pontos marcados com  << EDITAR >> :
-       - nome do curso (título, hero, oferta)
-       - preço e parcelas
-       - módulos / o que vai aprender
-       - depoimentos (TROQUE pelos reais antes de publicar!)
-       - LINK DA HOTMART: troque TODOS os  #SEU-LINK-HOTMART  pelo checkout real.
+     PÁGINA DE VENDAS — Do Silêncio ao Diálogo
+     Reforçada a partir do diagnóstico AnaLisa (Hotmart). Mantida 100% honesta:
+     sem contagem regressiva falsa, sem "De R$X por R$Y" inventado, sem
+     depoimentos fabricados e sem bônus que não existem.
+     Para criar a de outro curso: duplique, renomeie e troque os pontos << EDITAR >>.
      ========================================================================= -->
 <head>
   <meta charset="UTF-8" />
@@ -21,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=11" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=12" />
   <script src="assets/js/pixel.js?v=1"></script>
 </head>
 <body>
@@ -29,26 +26,49 @@
   <div class="mini-top">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
       <a href="index.html" class="brand"><b>MÁRCIA</b> <span>LUCIANA</span></a>
-      <a href="#oferta" class="btn" style="min-height:40px;padding:0 18px">Quero me inscrever</a>
+      <a href="#oferta" class="btn" style="min-height:40px;padding:0 18px;white-space:nowrap">Inscrever-se</a>
     </div>
   </div>
 
   <main>
-    <!-- HERO -->
-    <section class="sale-hero section">
+    <!-- HERO (texto + foto da expert) -->
+    <section class="sale-hero sale-hero--split section">
       <div class="container">
-        <p class="eyebrow eyebrow--center eyebrow--light">Curso online · no seu ritmo</p>
-        <!-- << EDITAR >> promessa principal -->
-        <h1>Converse com seus filhos sobre o que realmente importa, sem <span class="serif">medo</span> e sem tabu.</h1>
-        <p class="sale-sub">No <strong>Do Silêncio ao Diálogo</strong> você aprende, passo a passo, a falar sobre corpo, emoções, limites e proteção — com leveza, segurança e afeto, na medida certa para cada idade.</p>
-        <a href="#oferta" class="btn btn--lg">Quero começar agora
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <ul class="sale-hero__trust">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Acesso imediato</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pagamento 100% seguro</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg> Garantia de 7 dias</li>
-        </ul>
+        <div class="sale-hero__grid">
+          <div>
+            <p class="eyebrow eyebrow--center eyebrow--light">Curso online · no seu ritmo</p>
+            <!-- << EDITAR >> promessa principal -->
+            <h1>Converse com seus filhos sobre o que realmente importa, sem <span class="serif">medo</span> e sem tabu.</h1>
+            <p class="sale-sub">No <strong>Do Silêncio ao Diálogo</strong> você aprende, passo a passo, a falar sobre corpo, emoções, limites e proteção — com leveza, segurança e afeto, na medida certa para cada idade.</p>
+            <ul class="sale-hero__bullets">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Aprenda o que falar, como falar e quando falar sobre corpo e limites.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Linguagem adequada para cada idade, da primeira infância à adolescência.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Ferramentas práticas para criar um ambiente de confiança e proteção.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Quebre o ciclo do silêncio e garanta que seu filho saiba pedir ajuda.</li>
+            </ul>
+            <a href="#oferta" class="btn btn--lg">Quero começar agora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="sale-hero__trust">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Acesso imediato</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pagamento 100% seguro</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg> Garantia de 7 dias</li>
+            </ul>
+          </div>
+          <div class="sale-hero__photo">
+            <img src="assets/img/marcia-hero-portrait.jpg?v=6" width="1000" height="1249" alt="Márcia Luciana, especialista em sexualidade e prevenção ao abuso" fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE AUTORIDADE (fatos reais) -->
+    <section class="authority" aria-label="Autoridade da Márcia Luciana">
+      <div class="container authority__inner">
+        <span class="authority__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg> Autora de “Sexualidade sem Vergonha”</span>
+        <span class="authority__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/></svg> Formação método Master ESEPAS</span>
+        <span class="authority__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg> +3 anos dedicados à proteção da infância</span>
+        <span class="authority__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg> Projeto aprovado pela Lei Rouanet</span>
       </div>
     </section>
 
@@ -57,24 +77,27 @@
       <div class="container">
         <div class="sale-head">
           <p class="eyebrow eyebrow--center">Você reconhece isso?</p>
-          <h2 class="section-title section-title--center">Querer proteger, mas não saber como começar a conversa.</h2>
+          <h2 class="section-title section-title--center">O peso de não saber como proteger quem você mais ama.</h2>
         </div>
         <ul class="pains">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Você sente que precisa falar sobre esses assuntos, mas trava na hora.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Tem medo de falar “demais” ou “cedo demais” e acabar errando.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Cresceu sem essas conversas e não quer repetir o mesmo silêncio.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Quer que seu filho confie em você — e saiba pedir ajuda quando precisar.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Você sente que precisa falar sobre proteção e corpo, mas trava completamente na hora de começar.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Tem medo de falar cedo demais ou usar as palavras erradas e acabar errando com seu filho.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Sente a pressão de querer proteger, mas percebe que não tem as ferramentas certas para lidar com perguntas difíceis.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Você cresceu em um ambiente de silêncio e tabu e teme repetir esse mesmo padrão com seus filhos.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Sente insegurança sobre como ensinar limites e consentimento sem causar medo ou constrangimento.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Deseja que seu filho confie em você para contar qualquer coisa, mas não sabe como construir essa ponte hoje.</li>
         </ul>
+        <p class="sale-note">Se você se identificou com pelo menos uma dessas situações, este curso foi feito para você.</p>
       </div>
     </section>
 
-    <!-- SOLUÇÃO -->
+    <!-- SOLUÇÃO / A VIRADA -->
     <section class="tese section">
       <img class="tese__mono" src="assets/img/ml-monograma.png" alt="" aria-hidden="true" />
       <div class="container">
         <p class="eyebrow eyebrow--center eyebrow--light">A virada</p>
         <h2>Falar sobre isso não adianta assuntos. <span class="serif">Protege.</span></h2>
-        <p>Com as ferramentas certas, a conversa deixa de ser motivo de medo e vira um gesto de cuidado. Você aprende o que falar, como falar e quando falar — do seu jeito, com naturalidade.</p>
+        <p>Com as ferramentas certas, a conversa deixa de ser motivo de medo e vira um gesto de cuidado. Você aprende o que falar, como falar e quando falar — do seu jeito, com naturalidade, sem roteiros decorados.</p>
       </div>
     </section>
 
@@ -87,48 +110,125 @@
         </div>
         <!-- << EDITAR >> módulos do curso -->
         <div class="modules">
-          <div class="module"><div class="module__n">1</div><div><h3>Entendendo o silêncio</h3><p>Como os silêncios que recebemos moldam a forma como educamos — e como quebrá-los.</p></div></div>
-          <div class="module"><div class="module__n">2</div><div><h3>As palavras certas, em cada idade</h3><p>Linguagem adequada da primeira infância à adolescência, com exemplos de fala.</p></div></div>
-          <div class="module"><div class="module__n">3</div><div><h3>Corpo, limites e consentimento</h3><p>Como ensinar privacidade, respeito e o “não” — base da proteção.</p></div></div>
-          <div class="module"><div class="module__n">4</div><div><h3>Escuta e acolhimento</h3><p>Como reagir a perguntas difíceis e criar um ambiente de confiança em casa.</p></div></div>
-          <div class="module"><div class="module__n">5</div><div><h3>Da teoria à rotina</h3><p>Transformar o que aprendeu em pequenas conversas do dia a dia.</p></div></div>
+          <div class="module"><div class="module__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/></svg></div><div><h3>Entendendo o silêncio</h3><p>Como os silêncios que recebemos moldam a forma como educamos — e como quebrá-los.</p></div></div>
+          <div class="module"><div class="module__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div><div><h3>As palavras certas, em cada idade</h3><p>Linguagem adequada da primeira infância à adolescência, com exemplos de fala.</p></div></div>
+          <div class="module"><div class="module__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3>Corpo, limites e consentimento</h3><p>Como ensinar privacidade, respeito e o “não” — base da proteção.</p></div></div>
+          <div class="module"><div class="module__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/><path d="M8 9h8M8 13h5"/></svg></div><div><h3>Escuta e acolhimento</h3><p>Como reagir a perguntas difíceis e criar um ambiente de confiança em casa.</p></div></div>
+          <div class="module"><div class="module__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Da teoria à rotina</h3><p>Transformar o que aprendeu em pequenas conversas do dia a dia.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- PARA QUEM É -->
+    <!-- VOCÊ SERÁ CAPAZ DE (transformação) -->
     <section class="section">
       <div class="container">
         <div class="sale-head">
-          <p class="eyebrow eyebrow--center">Para quem é</p>
-          <h2 class="section-title section-title--center">Feito para quem quer cuidar e proteger.</h2>
+          <p class="eyebrow eyebrow--center">A transformação</p>
+          <h2 class="section-title section-title--center">Ao concluir o curso, você será capaz de:</h2>
         </div>
-        <ul class="pains">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Pais, mães e cuidadores que querem conversar sem medo de errar.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Quem quer quebrar ciclos e não repetir o silêncio que recebeu.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Educadores que buscam abordar o tema de forma ética e segura.</li>
+        <ul class="gains">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Falar sobre corpo, limites e privacidade com naturalidade, sem o peso do tabu ou do constrangimento.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Saber exatamente quais palavras usar para cada idade, evitando falar de menos ou explicar demais.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Criar um canal de confiança onde seu filho se sinta seguro para contar qualquer coisa para você.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Identificar e quebrar os ciclos de silêncio que você herdou da sua própria criação.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Ensinar seu filho a dizer não e a estabelecer limites claros sobre o próprio corpo.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Responder perguntas difíceis ou inesperadas com segurança, sem travar ou mudar de assunto.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Transformar momentos comuns do dia a dia em oportunidades leves de educação e proteção.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Ter mais tranquilidade sabendo que seu filho está munido de informação para se proteger.</li>
         </ul>
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section class="section section--areia2" id="sobre">
-      <div class="container sobre__grid">
-        <div class="sobre__photo">
-          <img src="assets/img/marcia-sobre.jpg?v=7" width="900" height="1199" alt="Márcia Luciana" loading="lazy" />
+    <!-- =====================================================================
+         PROVA SOCIAL (DEPOIMENTOS REAIS) — maior alavanca segundo a análise.
+         Esta seção está OCULTA até existirem depoimentos REAIS. Para ligar:
+         1) remova o style="display:none" da <section> abaixo;
+         2) troque cada card pelos relatos reais (1º nome + foto, se autorizado).
+         NÃO usar depoimentos inventados.
+         ===================================================================== -->
+    <section class="section section--areia2" id="depoimentos" style="display:none">
+      <div class="container">
+        <div class="sale-head">
+          <p class="eyebrow eyebrow--center">Quem já viveu essa virada</p>
+          <h2 class="section-title section-title--center">Histórias de quem quebrou o silêncio em casa.</h2>
         </div>
-        <div>
-          <p class="eyebrow">Com quem você vai aprender</p>
-          <h2 class="section-title">Márcia Luciana</h2>
-          <p class="lead" style="margin-bottom:14px">Pós-graduanda em Psicologia Sexual e especialista em sexualidade, educação emocional e prevenção ao abuso sexual.</p>
-          <p style="color:var(--tinta-suave)">Autora do livro <em>“Sexualidade sem Vergonha”</em> e idealizadora do movimento Geração Consciente e do projeto cultural <em>“A Arte do Cuidar”</em> (Lei Rouanet).</p>
+        <div class="depo__grid">
+          <figure class="depo">
+            <blockquote><p>“[Depoimento real aqui — relato de transformação, em 2 a 4 linhas.]”</p></blockquote>
+            <figcaption class="depo__who"><span class="depo__avatar">AA</span><span><b>Primeiro nome</b><span>Cidade/UF · mãe de 2</span></span></figcaption>
+          </figure>
+          <figure class="depo">
+            <blockquote><p>“[Depoimento real aqui.]”</p></blockquote>
+            <figcaption class="depo__who"><span class="depo__avatar">BB</span><span><b>Primeiro nome</b><span>Cidade/UF</span></span></figcaption>
+          </figure>
+          <figure class="depo">
+            <blockquote><p>“[Depoimento real aqui.]”</p></blockquote>
+            <figcaption class="depo__who"><span class="depo__avatar">CC</span><span><b>Primeiro nome</b><span>Cidade/UF</span></span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- DEPOIMENTOS — seção oculta até haver depoimentos REAIS.
-         Quando tiver, recriar uma <section class="section"> com .sale-head + .depo__grid
-         e os depoimentos reais (nome, foto, frase). O modelo antigo está no histórico do Git. -->
+    <!-- PARA QUEM É (personas / identificação) -->
+    <section class="section">
+      <div class="container">
+        <div class="sale-head">
+          <p class="eyebrow eyebrow--center">Para quem é</p>
+          <h2 class="section-title section-title--center">Este curso é para você se…</h2>
+        </div>
+        <div class="personas">
+          <article class="persona">
+            <h3>Pais e mães de primeira viagem</h3>
+            <p>“Quero proteger meu filho de tudo, mas travo só de pensar em como explicar as partes do corpo e os limites sem tirar a inocência dele.”</p>
+          </article>
+          <article class="persona">
+            <h3>Quem viveu o silêncio geracional</h3>
+            <p>“Cresci em uma casa onde esses assuntos eram proibidos. Não quero repetir esse padrão, mas não sei quais palavras usar para começar.”</p>
+          </article>
+          <article class="persona">
+            <h3>Educadores e cuidadores</h3>
+            <p>“Preciso de uma base ética e segura para orientar as crianças sob minha responsabilidade, sabendo o que é adequado para cada idade.”</p>
+          </article>
+          <article class="persona">
+            <h3>Pais de pré-adolescentes</h3>
+            <p>“Sinto que o tempo está passando. Preciso abrir um canal de diálogo antes que eles busquem respostas erradas na internet.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE / QUEM VAI TE GUIAR -->
+    <section class="section section--areia2" id="sobre">
+      <div class="container sobre__grid">
+        <div class="sobre__photo">
+          <img src="assets/img/marcia-sobre.jpg?v=7" width="900" height="1199" alt="Márcia Luciana de Oliveira" loading="lazy" />
+        </div>
+        <div>
+          <p class="eyebrow">Quem vai te guiar nessa jornada</p>
+          <h2 class="section-title">Márcia Luciana</h2>
+          <p class="lead" style="margin-bottom:14px">Especialista em sexualidade, educação emocional e prevenção ao abuso sexual. Dedica sua carreira a ensinar pais e educadores a quebrarem o ciclo do silêncio por meio de um diálogo leve, seguro e protetor.</p>
+          <ul class="offer__list" style="margin-bottom:0">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Autora do livro <em>Sexualidade sem Vergonha</em></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Pós-graduanda em Psicologia Sexual</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Idealizadora do movimento Geração Consciente</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Criadora do projeto A Arte do Cuidar (aprovado pela Lei Rouanet)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Formada no Método Master ESEPAS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA DE DÚVIDAS (WhatsApp) -->
+    <section class="section">
+      <div class="container mid-cta">
+        <h2 class="section-title section-title--center" style="font-size:clamp(1.5rem,3.5vw,2rem)">Ainda com dúvidas se é para você?</h2>
+        <p>Fale direto com a nossa equipe no WhatsApp e tire suas dúvidas antes de decidir. Sem compromisso.</p>
+        <a class="btn btn--wa" href="https://wa.me/555491338543?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Do%20Sil%C3%AAncio%20ao%20Di%C3%A1logo." target="_blank" rel="noopener" data-fbevent="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.3 7.9L3 21l1.1-4.6A9 9 0 1 1 21 12Z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </section>
 
     <!-- OFERTA / PREÇO -->
     <section class="section section--areia2" id="oferta">
@@ -137,12 +237,14 @@
           <p class="eyebrow eyebrow--center">Garanta sua vaga</p>
           <h2 class="section-title section-title--center">Comece hoje a transformar o diálogo em casa.</h2>
         </div>
+        <p class="offer__value">O investimento é pequeno perto do que está em jogo: a <strong>segurança e a confiança</strong> de quem você mais ama. E você experimenta sem risco — tem <strong>7 dias de garantia</strong>.</p>
         <div class="offer-trust">
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Autora de “Sexualidade sem Vergonha”</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Método Master ESEPAS</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Projeto aprovado pela Lei Rouanet</span>
         </div>
         <div class="offer">
+          <span class="offer__badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Acesso completo</span>
           <div class="offer__head">
             <h3>Curso Do Silêncio ao Diálogo</h3>
             <p>Acesso imediato · assista quando e onde quiser</p>
@@ -151,8 +253,10 @@
             <ul class="offer__list">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Todas as aulas em vídeo (acesso no seu ritmo)</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Linguagem e exemplos de fala para cada idade</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Certificado de conclusão</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Garantia de 7 dias</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Método Master ESEPAS aplicado</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Certificado de conclusão incluso</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Acesso imediato via Hotmart</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Garantia incondicional de 7 dias</li>
             </ul>
             <!-- << EDITAR >> preço -->
             <div class="offer__price">
@@ -161,7 +265,13 @@
             </div>
             <!-- << EDITAR >> troque o href pelo link do checkout da Hotmart -->
             <a class="btn btn--lg btn--block" href="https://pay.hotmart.com/W107820467Q" data-fbevent="InitiateCheckout" rel="noopener">Quero me inscrever agora</a>
-            <p class="offer__secure">🔒 Compra segura via Hotmart · cartão, Pix ou boleto</p>
+            <p class="offer__secure">🔒 Compra 100% segura e risco zero por 7 dias.</p>
+            <div class="pay-seals">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Cartão</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="m8 12 3 3 5-6"/></svg> Pix</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg> Boleto</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Ambiente seguro Hotmart</span>
+            </div>
           </div>
         </div>
       </div>
@@ -176,7 +286,7 @@
             <div>
               <p class="eyebrow">Risco zero</p>
               <h3>Garantia incondicional de 7 dias</h3>
-              <p>Faça sua inscrição, acesse o conteúdo e sinta na prática. Se não for para você, é só pedir o reembolso em até 7 dias e devolvemos 100% do valor.</p>
+              <p>Faça sua inscrição, acesse o conteúdo e sinta na prática. Se não for para você, é só pedir o reembolso em até 7 dias e devolvemos 100% do valor, sem burocracia. O risco é todo nosso.</p>
             </div>
           </div>
         </div>
@@ -196,15 +306,23 @@
             <div class="faq__a"><p>Assim que o pagamento é confirmado, o acesso é liberado automaticamente e você recebe os dados por e-mail. Assiste pelo computador, celular ou tablet.</p></div>
           </div>
           <div class="faq__item">
-            <button class="faq__q" aria-expanded="false">Por quanto tempo posso assistir?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
-            <div class="faq__a"><p>Você assiste no seu ritmo, quantas vezes quiser, pelo tempo de acesso informado na plataforma.</p></div>
+            <button class="faq__q" aria-expanded="false">Não tenho muito tempo. Consigo acompanhar?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+            <div class="faq__a"><p>Sim. As aulas são diretas e você assiste no seu ritmo, no horário que der — um pouco por dia já faz diferença. O acesso fica disponível para você revisitar quando quiser.</p></div>
           </div>
           <div class="faq__item">
             <button class="faq__q" aria-expanded="false">Isso não “adianta” assuntos para as crianças?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
-            <div class="faq__a"><p>Não. Falar com linguagem adequada à idade protege — dá informação, amplia a proteção e fortalece a confiança.</p></div>
+            <div class="faq__a"><p>Não. Falar com linguagem adequada à idade protege — dá informação, amplia a proteção e fortalece a confiança. O silêncio é que deixa a criança mais vulnerável.</p></div>
           </div>
           <div class="faq__item">
-            <button class="faq__q" aria-expanded="false">E se eu não gostar?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+            <button class="faq__q" aria-expanded="false">O conteúdo serve para filhos de qualquer idade?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+            <div class="faq__a"><p>Sim. O curso orienta como conversar em cada fase — primeira infância, idade escolar, pré-adolescência e adolescência —, sempre com linguagem apropriada ao desenvolvimento.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">O curso oferece certificado?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+            <div class="faq__a"><p>Sim, você recebe certificado de conclusão ao terminar o curso.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">E se eu sentir que o curso não é para mim?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
             <div class="faq__a"><p>Você tem 7 dias de garantia. Se não for para você, devolvemos 100% do valor, sem burocracia.</p></div>
           </div>
         </div>
@@ -217,11 +335,12 @@
       <div class="container">
         <p class="eyebrow eyebrow--center eyebrow--light">Dê o primeiro passo</p>
         <h2>Seu filho não precisa herdar o <span class="serif">silêncio</span>.</h2>
-        <p>Comece hoje a construir conversas que protegem e aproximam.</p>
+        <p>Comece hoje a construir conversas que protegem e aproximam — com 7 dias de garantia para decidir com tranquilidade.</p>
         <!-- << EDITAR >> troque o href pelo link do checkout da Hotmart -->
-        <a href="https://pay.hotmart.com/W107820467Q" class="btn btn--light btn--lg" data-fbevent="InitiateCheckout" rel="noopener">Quero me inscrever
+        <a href="https://pay.hotmart.com/W107820467Q" class="btn btn--light btn--lg" data-fbevent="InitiateCheckout" rel="noopener">Garantir minha vaga agora
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+        <p style="margin:18px 0 0;font-size:.9rem;color:rgba(255,255,255,.75)">Dúvidas? Fale no WhatsApp: (54) 9133-8543</p>
       </div>
     </section>
   </main>
