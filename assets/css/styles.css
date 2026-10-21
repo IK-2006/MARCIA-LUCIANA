@@ -592,6 +592,8 @@ h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-s
 .offer__head { border-radius: var(--radius) var(--radius) 0 0; }
 .offer__value { max-width: 620px; margin: 0 auto 26px; text-align: center; color: var(--tinta-suave); font-size: 1rem; line-height: 1.6; }
 .offer__value strong { color: var(--tinta); }
+.offer__price .old { display: block; margin-bottom: 2px; }
+.offer__save { display: inline-block; margin: 10px auto 2px; background: #eaf7ef; color: #1f7a44; border: 1px solid #bfe3cd; font-weight: 700; font-size: .82rem; padding: 5px 14px; border-radius: 999px; }
 .pay-seals { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px 16px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--linha); }
 .pay-seals span { font-size: .8rem; color: var(--tinta-suave); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 .pay-seals svg { width: 15px; height: 15px; color: var(--dourado-dark); flex: none; }
